@@ -1,0 +1,5 @@
+#!/bin/sh
+echo lin
+g++ -O3 -std=gnu++11 main.cpp cvthread.cpp -o cvwxtest `wx-config --cxxflags --libs` -lopencv_video -lopencv_core -lopencv_highgui -lopencv_imgproc -DMYLINUX=1 -lX11
+echo win
+x86_64-w64-mingw32-g++ -std=gnu++11 main.cpp cvthread.cpp -o cvwxtest.exe -I/usr/x86_64-w64-mingw32/include libwx_baseu-3.1-x86_64-w64-mingw32.a `/usr/x86_64-w64-mingw32/bin/wx-config --cxxflags --libs` libopencv_world320.dll.a
